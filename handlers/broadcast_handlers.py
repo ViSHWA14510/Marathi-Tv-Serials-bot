@@ -47,7 +47,7 @@ async def main_broadcast_handler(m, db):
         if not broadcast_ids.get(broadcast_id):
             break
     out = await m.reply_text(
-        text=f"Broadcast Started! You will be notified with log file when all the users are notified."
+        text=f"𝗕𝗿𝗼𝗮𝗱𝗰𝗮𝘀𝘁 𝗦𝘁𝗮𝗿𝘁𝗲𝗱! 𝗬𝗼𝘂 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗻𝗼𝘁𝗶𝗳𝗶𝗲𝗱 𝘄𝗶𝘁𝗵 𝗹𝗼𝗴 𝗳𝗶𝗹𝗲 𝘄𝗵𝗲𝗻 𝗮𝗹𝗹 𝘁𝗵𝗲 𝘂𝘀𝗲𝗿𝘀 𝗮𝗿𝗲 𝗻𝗼𝘁𝗶𝗳𝗶𝗲𝗱.."
     )
     start_time = time.time()
     total_users = await db.total_users_count()
@@ -92,13 +92,13 @@ async def main_broadcast_handler(m, db):
     await out.delete()
     if failed == 0:
         await m.reply_text(
-            text=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.",
+            text=f"🇧 🇷 🇴 🇦 🇩 🇨 🇦 🇸 🇹  🇨 🇴 🇲 🇵 🇱 🇪 🇹 🇪 🇩  🇮 🇳 `{completed_in}`\n\n🇹 🇴 🇹 🇦 🇱  🇺 🇸 🇪 🇷 🇸 {total_users}.\n🇹 🇴 🇹 🇦 🇱  🇩 🇴 🇳 🇪 {done}, {success} 🇸 🇺 🇨 🇨 🇪 🇸 🇸 and {failed} 🇫 🇦 🇮 🇱 🇪 🇩.",
             quote=True
         )
     else:  
         await m.reply_document(
             document='broadcast.txt',
-            caption=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.",
+            caption=f"🇧 🇷 🇴 🇦 🇩 🇨 🇦 🇸 🇹  🇨 🇴 🇲 🇵 🇱 🇪 🇹 🇪 🇩  🇮 🇳 `{completed_in}`\n\n🇹 🇴 🇹 🇦 🇱  🇺 🇸 🇪 🇷 🇸 {total_users}.\n🇹 🇴 🇹 🇦 🇱  🇩 🇴 🇳 🇪 {done}, {success} 🇸 🇺 🇨 🇨 🇪 🇸 🇸 and {failed} 🇫 🇦 🇮 🇱 🇪 🇩.",
             quote=True
         )
     await aiofiles.os.remove('broadcast.txt')
