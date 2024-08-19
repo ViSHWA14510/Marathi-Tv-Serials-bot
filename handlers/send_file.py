@@ -36,19 +36,19 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                 fileName = quote_plus(get_name(lazy_file))
 
                 await lazy_file.reply_text(
-                    text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                    text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ..! ꜰᴏʀ ɪᴅ #{user_id} \n\n•• 𝐹𝒾𝓁𝑒 𝒩𝒶𝓂𝑒:- {fileName}",
                     quote=True,
                     disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("web Download", url=lazy_download),  # we download Link
-                                                        InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Dᴏᴡɴʟᴏᴀᴅ 🚀", url=lazy_download),  # we download Link
+                                                        InlineKeyboardButton('🖥 Sᴛʀᴇᴀᴍ 🖥', url=lazy_stream)]])  # web stream Link
                 )
                 return await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                           message_id=file_id, 
                                           reply_markup=InlineKeyboardMarkup(
                                             [
                                                 [
-                                                  InlineKeyboardButton("Fast Download", url=lazy_download),
-                                                  InlineKeyboardButton("▶Stream online", url=lazy_stream),
+                                                  InlineKeyboardButton("🚀 Dᴏᴡɴʟᴏᴀᴅ 🚀", url=lazy_download),
+                                                  InlineKeyboardButton("🖥 Sᴛʀᴇᴀᴍ 🖥", url=lazy_stream),
                                                 ],
                                             ]),
                                             )
@@ -59,19 +59,19 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
             lazy_download = f"{URL}{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
             fileName = quote_plus(get_name(lazy_file))
             await lazy_file.reply_text(
-                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ..! ꜰᴏʀ ɪᴅ #{user_id} \n\n•• 𝐹𝒾𝓁𝑒 𝒩𝒶𝓂𝑒:- {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("web Download", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Dᴏᴡɴʟᴏᴀᴅ 🚀", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('🖥 Sᴛʀᴇᴀᴍ 🖥', url=lazy_stream)]])  # web stream Link
             )
             return await bot.forward_messages(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                               message_ids=file_id,
                                               reply_markup=InlineKeyboardMarkup(
                                             [
                                                 [
-                                                  InlineKeyboardButton("Fast Download", url=lazy_download),
-                                                  InlineKeyboardButton("▶Stream online", url=lazy_stream),
+                                                  InlineKeyboardButton("🚀 Dᴏᴡɴʟᴏᴀᴅ 🚀", url=lazy_download),
+                                                  InlineKeyboardButton("🖥 Sᴛʀᴇᴀᴍ 🖥", url=lazy_stream),
                                                 ],
                                             ]),
                                             )
