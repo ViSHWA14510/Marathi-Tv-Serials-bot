@@ -205,7 +205,7 @@ async def Lazy_start():
             try:
                 forwarded_msg = await message.forward(Config.DB_CHANNEL)
                 file_er_id = str(forwarded_msg.id)
-                share_link = f"https://t.me/{Config.BOT_USERNAME}?start=LazyDeveloperr_{str_to_b64(file_er_id)}"
+                share_link = f"https://t.me/{Config.BOT_USERNAME}?start=iTS_ViSHWA14_{str_to_b64(file_er_id)}"
                 CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.id,
                                                             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                                 "Get Sharable Link 🔗", url=share_link)]]))
@@ -468,7 +468,7 @@ async def Lazy_start():
                     return
                 except Exception:
                     await cmd.message.edit(
-                        text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/LazyDeveloperSupport).",
+                        text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ [𝐕𝐢𝐒𝐇𝐖𝐀⚡](https://t.me/iTS_ViSHWA14).",
                         disable_web_page_preview=True
                     )
                     return
