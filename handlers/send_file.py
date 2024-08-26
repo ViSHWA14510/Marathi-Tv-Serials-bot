@@ -19,14 +19,7 @@ async def reply_forward(message: Message, file_id: int):
             f"https://t.me/{Config.BOT_USERNAME}?start=LazyDeveloperr_{str_to_b64(str(file_id))}\n"
             f"__ᴛᴏ ʀᴇᴛʀɪᴠᴇ ᴛʜᴇ ꜱᴛᴏʀᴇᴅ ꜰɪʟᴇ, ᴊᴜꜱᴛ ᴏᴘᴇɴ ᴛʜᴇ ʟɪɴᴋ !__\n\n",
             disable_web_page_preview=True, quote=True)
-async def reply_forward(message: Message, file_id: int):
-    
-    try:
-        await message.reply_text(
-            f"Fɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 𝟹𝟶 ᴍɪɴᴜᴛᴇꜱ ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ. Pʟᴇᴀꜱᴇ ғᴏʀᴡᴀʀᴅ ᴀɴᴅ ꜱᴀᴠᴇ ᴛʜᴇᴍ.",
-            disable_web_page_preview=True,
-            quote=True
-        )
+
     except FloodWait as e:
         await asyncio.sleep(e.value)
         await reply_forward(message, file_id)
@@ -92,9 +85,4 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
 async def send_media_and_reply(bot: Client, user_id: int, file_id: int):
     sent_message = await media_forward(bot, user_id, file_id)
     await reply_forward(message=sent_message, file_id=file_id)
-    asyncio.create_task(delete_after_delay(sent_message, 1800))
-
-async def delete_after_delay(message, delay):
-    await asyncio.sleep(delay)
-    await message.delete()
-
+await asyncio.sleep(2)
